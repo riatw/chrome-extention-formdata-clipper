@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<div id="wrap">
+		<ul class="m-list-form">
+			<li>
+				<label>対象のフォーム</label>
+				<select name="targetform" id="targetform" class="js-storage">
+
+				</select>
+
+				<p id="init-error">
+					フォームの取得に失敗しました。<br>
+					表示中のページを再読み込みしてください。
+				</p>
+			</li>
+			<li>
+				<button id="trace">Copy</button>
+				<button id="paste">Paste</button>
+				<button id="clear">clear</button>
+			</li>
+			<li>
+				<label>クリップボード</label>
+				<textarea id="buff" rows="10" class="js-storage"></textarea>
+			</li>
+		</ul>
+	</div>
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
