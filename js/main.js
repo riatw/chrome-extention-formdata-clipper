@@ -27,7 +27,7 @@ function jsStorageLoader(name) {
 	}
 }
 function jsStorageSaver(name, val) {
-	localStorage.setItem(name, $(this).val());
+	localStorage.setItem(name, val);
 }
 
 $(document).ready(function(){
