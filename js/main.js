@@ -59,13 +59,13 @@ $(document).ready(function(){
 	});
 
 	// 元のカレンダーからイベントを取得
-	$("#trace").click(function() {
+	$("#copy").click(function() {
 		var targetform = $("#targetform").val();
 
 		clearBuff();
 
 		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-			chrome.tabs.sendMessage(tabs[0].id, { method: "copy", targetform: $("#targetform").val() }, function(response) {
+			chrome.tabs.sendMessage(tabs[0].id, { method: "copy", targetform: $("#targetform").val(), target_exclude: $("#target_exclude").val() }, function(response) {
 				var html = response;
 
 				writeToBuff(html);
